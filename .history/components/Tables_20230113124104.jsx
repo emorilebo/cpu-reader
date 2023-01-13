@@ -13,36 +13,6 @@ const cpus = [
     cpupercent: "22%",
     cpupower: "30",
   },
-  {
-    pd: "127",
-    name: "Chrome",
-    cpupercent: "22%",
-    cpupower: "30",
-  },
-  {
-    pd: "127",
-    name: "Chrome",
-    cpupercent: "22%",
-    cpupower: "30",
-  },
-  {
-    pd: "127",
-    name: "Chrome",
-    cpupercent: "22%",
-    cpupower: "30",
-  },
-  {
-    pd: "127",
-    name: "Chrome",
-    cpupercent: "22%",
-    cpupower: "30",
-  },
-  {
-    pd: "127",
-    name: "Chrome",
-    cpupercent: "22%",
-    cpupower: "30",
-  },
   
 ];
 
