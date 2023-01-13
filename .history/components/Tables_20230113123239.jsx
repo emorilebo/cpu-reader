@@ -5,7 +5,7 @@ const cpus = [
     pd: "127",
     name: "Chrome",
     cpupercent: "22%",
-    cpupower: "30",
+    role: "30",
   },
   // More people...
 ];
@@ -57,13 +57,19 @@ export default function Tables() {
                     >
                       CPU Power
                     </th>
+                    <th
+                      scope="col"
+                      className="relative py-3.5 pl-3 pr-4 sm:pr-6"
+                    >
+                      <span className="sr-only">Edit</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
                   {cpus.map((cpu) => (
                     <tr key={cpu.cpupercent}>
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        {cpu.pd}
+                        {cpu.name}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {cpu.name}
@@ -72,7 +78,15 @@ export default function Tables() {
                         {cpu.cpupercent}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {cpu.cpupower}
+                        {cpu.role}
+                      </td>
+                      <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                        <a
+                          href="#"
+                          className="text-indigo-600 hover:text-indigo-900"
+                        >
+                          Edit<span className="sr-only">, {cpu.name}</span>
+                        </a>
                       </td>
                     </tr>
                   ))}

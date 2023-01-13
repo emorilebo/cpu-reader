@@ -2,10 +2,10 @@ import React from "react";
 
 const cpus = [
   {
-    pd: "127",
-    name: "Chrome",
-    cpupercent: "22%",
-    cpupower: "30",
+    name: "Lindsay Walton",
+    title: "Front-end Developer",
+    email: "lindsay.walton@example.com",
+    role: "Member",
   },
   // More people...
 ];
@@ -57,22 +57,36 @@ export default function Tables() {
                     >
                       CPU Power
                     </th>
+                    <th
+                      scope="col"
+                      className="relative py-3.5 pl-3 pr-4 sm:pr-6"
+                    >
+                      <span className="sr-only">Edit</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
                   {cpus.map((cpu) => (
-                    <tr key={cpu.cpupercent}>
+                    <tr key={cpu.email}>
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        {cpu.pd}
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {cpu.name}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {cpu.cpupercent}
+                        {cpu.title}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {cpu.cpupower}
+                        {cpu.email}
+                      </td>
+                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                        {cpu.role}
+                      </td>
+                      <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                        <a
+                          href="#"
+                          className="text-indigo-600 hover:text-indigo-900"
+                        >
+                          Edit<span className="sr-only">, {cpu.name}</span>
+                        </a>
                       </td>
                     </tr>
                   ))}

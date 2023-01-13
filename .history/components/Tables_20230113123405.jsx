@@ -74,6 +74,7 @@ export default function Tables() {
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {cpu.cpupower}
                       </td>
+                      
                     </tr>
                   ))}
                 </tbody>
